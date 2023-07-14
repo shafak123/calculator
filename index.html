@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculater</title>  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h3{
+            color: aliceblue;
+            padding-top: 8px;
+        }
+        #z{
+            width: 225px;
+            margin-top: 25px;
+            margin-bottom: 7px;
+            border-radius: 15px;
+        }
+        #calu{
+            width: 300px;
+            height: 410px;
+            background-color: rgba(0, 0, 0, 0.814);
+            margin-top: 130px;
+            border-radius: 20px;
+        }
+        input{
+            width: 50px;
+            height: 45px;
+            margin-top: 8px;
+            box-shadow: 5px 8px black;
+            margin-left: 2px;
+            margin-right: 2px;
+            font-size: 20px;
+            border-radius: 13px;
+            border: 3px solid black;
+        }
+        input:hover{
+            background-color: darkgray;
+        }
+        #a {
+            background-color: green;
+            color: aqua;
+        }
+        #b {
+            background-color: green;
+            color: aqua;
+        }
+        #c {
+            background-color: green;
+            color: aqua;
+        }
+        #d {
+            background-color: rgb(176, 81, 36);
+            color: aqua;
+        }
+        #h {
+            background-color: rgb(176, 81, 36);
+            color: aqua;
+        }
+        #m {
+            background-color: rgb(176, 81, 36);
+            color: aqua;
+        }
+        #q {
+            background-color: rgb(176, 81, 36);
+            color: aqua;
+        }
+        #u {
+            background-color: rgb(176, 81, 36);
+            color: aqua;
+        }
+        hr{
+            width: 65px;
+            height: 3px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="calu">
+        <h3>Calculater</h3>
+        <hr>
+        <input type="text" id="z">
+        <br>
+        <input type="button" value="c" id="a" onclick="cc();">
+        <input type="button" value="%" id="b" onclick="document.getElementById('z').value+=document.getElementById('b').value">
+        <input type="button" value="clear" id="c" onclick="cle();"> 
+        <input type="button" value="/" id="d" onclick="document.getElementById('z').value+=document.getElementById('d').value">
+        <br>
+        <input type="button" value="7" id="e" onclick="document.getElementById('z').value+=document.getElementById('e').value">
+        <input type="button" value="8" id="f" onclick="document.getElementById('z').value+=document.getElementById('f').value">
+        <input type="button" value="9" id="g" onclick="document.getElementById('z').value+=document.getElementById('g').value">
+        <input type="button" value="*" id="h" onclick="document.getElementById('z').value+=document.getElementById('h').value">
+        <br>
+        <input type="button" value="4" id="j" onclick="document.getElementById('z').value+=document.getElementById('j').value">
+        <input type="button" value="5" id="k" onclick="document.getElementById('z').value+=document.getElementById('k').value">
+        <input type="button" value="6" id="l" onclick="document.getElementById('z').value+=document.getElementById('l').value">
+        <input type="button" value="-" id="m" onclick="document.getElementById('z').value+=document.getElementById('m').value">
+        <br>
+        <input type="button" value="1" id="n" onclick="document.getElementById('z').value+=document.getElementById('n').value">
+        <input type="button" value="2" id="o" onclick="document.getElementById('z').value+=document.getElementById('o').value">
+        <input type="button" value="3" id="p" onclick="document.getElementById('z').value+=document.getElementById('p').value">
+        <input type="button" value="+" id="q" onclick="document.getElementById('z').value+=document.getElementById('q').value">
+        <br>
+        <input type="button" value="00" id="r"onclick="document.getElementById('z').value+=document.getElementById('r').value">
+        <input type="button" value="0" id="s" onclick="document.getElementById('z').value+=document.getElementById('s').value">
+        <input type="button" value="." id="t" onclick="document.getElementById('z').value+=document.getElementById('t').value">
+        <input type="button" value="=" id="u" onclick="my();">
+        <br><br>
+        <hr>
+        
+    </div>
+</center>
+<script>
+    function my()
+    {
+        document.getElementById('z').value=eval(document.getElementById('z').value)
+    }
+    function cc(){
+        document.getElementById('z').value=0
+    }
+    function cle(){
+        document.getElementById('z').value=document.getElementById('c').value
+    }
+
+</script>
+    
+</body>
+</html>
